@@ -27,13 +27,13 @@ public class Car {
     private Timer moving = new Timer();
 
     /**
-     *
+     * construtor de classe por omissao
      */
     public Car(){
     }
 
     /**
-     *
+     * construtor de classe
      * @param id
      * @param tankCapacity
      * @param color
@@ -87,7 +87,7 @@ public class Car {
     }
 
     /**
-     *
+     * retorna estado
      * @return state
      */
     public State getState() {
@@ -95,7 +95,7 @@ public class Car {
     }
 
     /**
-     *
+     * define estado
      * @param state
      */
     public void setState(State state) {
@@ -103,7 +103,7 @@ public class Car {
     }
 
     /**
-     *
+     * retorna nivel de combustivel
      * @return fuelLevel
      */
     public float getFuelLevel() {
@@ -111,7 +111,7 @@ public class Car {
     }
 
     /**
-     *
+     * define velocidade
      * @param speed
      * @return boolean
      */
@@ -146,7 +146,7 @@ public class Car {
     }
 
     /**
-     *
+     * retorna velocidade
      * @return speed
      */
     float getSpeed() {
@@ -154,6 +154,7 @@ public class Car {
     }
 
     /**
+     * Usa combustivel
      * @param fuel
      * @return boolean
      */
@@ -170,6 +171,7 @@ public class Car {
     }
 
     /**
+     * Adiciona combustivel ao tanque
      * @param fuel
      * @return boolean
      */
@@ -194,6 +196,7 @@ public class Car {
     }
 
     /**
+     * inicia o carro
      * @return boolean
      */
     public boolean start(){
@@ -229,7 +232,7 @@ public class Car {
     }
 
     /**
-     *
+     * retorna id
      * @return id
      */
     public long getId() {
@@ -237,7 +240,7 @@ public class Car {
     }
 
     /***
-     *
+     * define o id
      * @param id
      */
     public void setId(long id) {
@@ -249,7 +252,7 @@ public class Car {
     }
 
     /**
-     * Calculate consumption rate
+     * Calcula o ConsumptionRate
      * @return <code>rateOfConsumptionPerCylinder*numberOfCylinders</code>
      */
     public float calcConsumptionRate() {
@@ -257,7 +260,7 @@ public class Car {
     }
 
     /**
-     *
+     * retorna o ConsumptionRate
      * @return rateOfConsumptionPerCylinder
      */
     public float getConsumptionRate() {
@@ -265,7 +268,7 @@ public class Car {
     }
 
     /**
-     *
+     * retorna o NumberOfCylinders
      * @return numberOfCylinders
      */
     public short getNumberOfCylinders() {
@@ -273,7 +276,7 @@ public class Car {
     }
 
     /**
-     *
+     * define o NumberOfCylinders
      * @param numberOfCylinders
      */
     public void setNumberOfCylinders(short numberOfCylinders) {
