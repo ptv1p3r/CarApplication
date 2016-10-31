@@ -228,10 +228,18 @@ public class Car {
         return false;
     }
 
+    /**
+     *
+     * @return id
+     */
     public long getId() {
         return id;
     }
 
+    /***
+     *
+     * @param id
+     */
     public void setId(long id) {
        if( id < 0 ){
            System.err.println("Car id can not negative");
@@ -271,4 +279,5 @@ public class Car {
     public void setNumberOfCylinders(short numberOfCylinders) {
         this.numberOfCylinders = numberOfCylinders;
     }
+
 }
