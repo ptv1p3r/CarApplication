@@ -10,7 +10,7 @@ public class SpeedCycle extends TimerTask {
 
     /**
      *
-      * @param mycar
+      * @param myCar
      */
     public SpeedCycle(Car myCar){
         super();
@@ -24,13 +24,15 @@ public class SpeedCycle extends TimerTask {
      */
     @Override
             public void run() {
-                // consumo de combustivel
-                if( myCar.useFuel(myCar.getSpeed() * myCar.calcConsumptionRate()) ) {
-                    System.out.println("Current fuel: " + myCar.getFuelLevel()+"\t speed " + myCar.getSpeed() + " Km/h");
-                } else { // sem combustivel
-                    System.out.println("Not enough fuel, ");
-                    myCar.setState(Car.State.SHUTDOWN);
-                    this.cancel();
-                }
+
+        if (myCar.getState() != Car.State.SHUTDOWN)
+            // consumo de combustivel
+            if (myCar.useFuel(myCar.getSpeed() * myCar.calcConsumptionRate())) {
+                System.out.println("Current fuel: " + myCar.getFuelLevel() + "\t speed " + myCar.getSpeed() + " Km/h");
+            } else { // sem combustivel
+                System.out.println("Low fuel, shutting down.");
+                myCar.setState(Car.State.SHUTDOWN);
+                this.cancel();
             }
+        }
 }
