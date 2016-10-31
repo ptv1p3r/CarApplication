@@ -1,4 +1,3 @@
-import static java.lang.System.out;
 import java.util.TimerTask;
 
 /**

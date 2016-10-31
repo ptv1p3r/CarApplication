@@ -3,7 +3,7 @@ import static java.lang.System.out;
 import java.util.Timer;
 
 /**
- * @author Pedro Roldan.
+ * @author Pedro Roldan
  * @version 0.0
  */
 public class Car {
@@ -86,6 +86,10 @@ public class Car {
 
     }
 
+    /**
+     *
+     * @return state
+     */
     public State getState() {
         return state;
     }
@@ -100,7 +104,7 @@ public class Car {
 
     /**
      *
-     * @return
+     * @return fuelLevel
      */
     public float getFuelLevel() {
         return fuelLevel;
@@ -109,7 +113,7 @@ public class Car {
     /**
      *
      * @param speed
-     * @return
+     * @return boolean
      */
     public boolean setSpeed(float speed){
 
@@ -133,7 +137,6 @@ public class Car {
 
         //everything went fine, speed up and use fuel
 
-
         SpeedCycle cycle = new SpeedCycle(this);
         this.speed = speed;
         this.moving.schedule(cycle, 1, (long)(1E3/speed));
@@ -143,7 +146,7 @@ public class Car {
     }
 
     /**
-     * @author Pedro Roldan
+     *
      * @return speed
      */
     float getSpeed() {
@@ -151,9 +154,8 @@ public class Car {
     }
 
     /**
-     * @author Pedro Roldan
      * @param fuel
-     * @return
+     * @return boolean
      */
     public boolean useFuel(float fuel){
         if(fuelLevel> 0){
@@ -168,9 +170,8 @@ public class Car {
     }
 
     /**
-     * @author Pedro Roldan
      * @param fuel
-     * @return
+     * @return boolean
      */
     public boolean addFuel(float fuel) {
 
@@ -193,8 +194,7 @@ public class Car {
     }
 
     /**
-     * @author Pedro Roldan
-     * @return
+     * @return boolean
      */
     public boolean start(){
             
@@ -217,7 +217,7 @@ public class Car {
 
     /**
      *
-     * @return
+     * @return boolean
      */
     public boolean stop(){
         if (this.state == State.ENGINEWORKING || this.state == State.READY) {
