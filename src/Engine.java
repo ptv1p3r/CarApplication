@@ -16,7 +16,6 @@ public class Engine extends Timer {
         this.speedCycle = speedCycle;
     }
 
-
     public void schedule(long delay, long period) {
         super.schedule(this.speedCycle, delay, period); //To change body of generated methods, choose Tools | Templates.
     }

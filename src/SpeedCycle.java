@@ -22,7 +22,7 @@ public class SpeedCycle extends TimerTask {
     public void run() {
 
         if(car.useFuel(car.getSpeed() * car.calcConsumptionRate())){
-            System.out.println("Current fuel:" + car.getFuelLevel() + "\t speed:" + car.getSpeed());
+            System.out.println(car);
         }else{
             System.err.println("No enough fuel, car is stoping...");
             car.setState(Car.State.SHUTDOWN);

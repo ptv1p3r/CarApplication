@@ -26,6 +26,18 @@ public class Car {
     
     private Timer moving = new Timer();
 
+
+    @Override
+    /**
+     * Override da funcao toString do objecto
+     * @return strDashBoard
+     */
+    public String toString(){
+        String strDashBoard = "Speed: " + this.speed + "\t Fuel: " + this.fuelLevel + "\t State: " + this.state + "\t Consuption Rate: ";
+        return strDashBoard;
+    }
+
+
     /**
      * construtor de classe por omissao
      */
