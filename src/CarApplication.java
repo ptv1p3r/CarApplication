@@ -29,6 +29,8 @@ public class CarApplication {
             Logger.getLogger(CarApplication.class.getName()).log(Level.SEVERE, null, ex);
         }
 
+        pedroCar.breakCar();
+
         pedroCar.setSpeed(30);
 
 

@@ -5,34 +5,30 @@ import java.util.TimerTask;
  * @version 0.0
  */
 public class SpeedCycle extends TimerTask {
-    
-    private Car myCar;
+    private Car car;
 
     /**
      *
-      * @param myCar
+     * @param car
      */
-    public SpeedCycle(Car myCar){
+    public SpeedCycle(Car car){
         super();
-        
-        this.myCar = myCar;
-        
+
+        this.car = car;
+
     }
 
-    /**
-     * Override do metodo run default do timer
-     */
     @Override
-            public void run() {
+    public void run() {
 
-        if (myCar.getState() != Car.State.SHUTDOWN)
-            // consumo de combustivel
-            if (myCar.useFuel(myCar.getSpeed() * myCar.calcConsumptionRate())) {
-                System.out.println("Current fuel: " + myCar.getFuelLevel() + "\t speed " + myCar.getSpeed() + " Km/h");
-            } else { // sem combustivel
-                System.out.println("Low fuel, shutting down.");
-                myCar.setState(Car.State.SHUTDOWN);
-                this.cancel();
-            }
+        if(car.useFuel(car.getSpeed() * car.calcConsumptionRate())){
+            System.out.println("Current fuel:" + car.getFuelLevel() + "\t speed:" + car.getSpeed());
+        }else{
+            System.err.println("No enough fuel, car is stoping...");
+            car.setState(Car.State.SHUTDOWN);
+            this.cancel();
+
         }
+    }
+
 }
