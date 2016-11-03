@@ -283,4 +283,18 @@ public class Car {
         this.numberOfCylinders = numberOfCylinders;
     }
 
+    /**
+     *
+     * @return boolean
+     */
+    public boolean breakCar(){
+        this.speed = 0;
+
+        this.moving.purge();
+
+        this.state =  state.ENGINEWORKING;
+
+        return true;
+    }
+
 }
