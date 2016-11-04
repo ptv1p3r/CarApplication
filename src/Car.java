@@ -33,7 +33,7 @@ public class Car {
      * @return strDashBoard
      */
     public String toString(){
-        String strDashBoard = "Speed: " + this.speed + "\t Fuel: " + this.fuelLevel + "\t State: " + this.state + "\t Comsuption Rate: ";
+        String strDashBoard = "Speed: " + this.speed + "\t Fuel: " + this.fuelLevel + "\t State: " + this.state + "\t Consumption Rate: " + this.getConsumptionRate();
         return strDashBoard;
     }
 
