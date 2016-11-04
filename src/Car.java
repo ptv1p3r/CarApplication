@@ -29,14 +29,13 @@ public class Car {
 
     @Override
     /**
-     * Override da funcao toString do objecto
+     * Override da funcao toString do objecto car
      * @return strDashBoard
      */
     public String toString(){
-        String strDashBoard = "Speed: " + this.speed + "\t Fuel: " + this.fuelLevel + "\t State: " + this.state + "\t Consuption Rate: ";
+        String strDashBoard = "Speed: " + this.speed + "\t Fuel: " + this.fuelLevel + "\t State: " + this.state + "\t Comsuption Rate: ";
         return strDashBoard;
     }
-
 
     /**
      * construtor de classe por omissao
